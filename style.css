@@ -1,0 +1,101 @@
+/* Rupa legal + support pages. Palette from design/rupa/system/tokens.css ("Kotak Foto").
+   Dark = tirai ground with kilat text and mentega accent; light = kilat paper with tirai ink.
+   No external fonts, scripts or trackers. Sizes in rem so browser text size scales everything. */
+
+:root {
+  color-scheme: dark light;
+  --ground: #191410;  /* tirai */
+  --card:   #27201b;  /* tirai-2 */
+  --ink:    #f8f5ee;  /* kilat */
+  --ink-2:  #cfc6b8;
+  --line:   #3c332d;  /* tirai-3 */
+  --accent: #f9e181;  /* mentega: strokes, focus, current page */
+  --link:   #f9e181;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ground: #f8f5ee;  /* kilat paper */
+    --card:   #fffdf8;
+    --ink:    #191410;  /* tirai ink */
+    --ink-2:  #554a40;
+    --line:   #d9d0c2;
+    --accent: #f4993c;  /* bohlam, strokes only */
+    --link:   #7a4a12;  /* dark tungsten, AA on paper */
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 112.5%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+.skip { position: absolute; left: -999px; top: 0; padding: 0.5rem 1rem; background: var(--accent); color: #191410; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 2; }
+.wrap { max-width: 42rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+header.site {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.5rem 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-size: 1.4rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+}
+.strip { display: inline-grid; grid-template-rows: repeat(4, 0.42rem); gap: 0.12rem; padding: 0.15rem;
+  background: var(--ink); border-radius: 2px; }
+.strip i { display: block; width: 0.62rem; background: var(--ground); }
+.strip i:last-child { background: var(--accent); }
+
+nav ul { display: flex; flex-wrap: wrap; gap: 0.1rem 1.1rem; margin: 0; padding: 0; list-style: none; }
+nav a { display: inline-block; padding: 0.45rem 0; min-height: 2.4rem; color: var(--ink-2); text-decoration: none; }
+nav a[aria-current] {
+  color: var(--ink); font-weight: 600; text-decoration: underline;
+  text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: 0.3em;
+}
+nav.lang { margin-top: 0.5rem; }
+nav.lang a { font-size: 0.9rem; }
+
+main { padding-top: 1.25rem; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.01em; margin: 0.5rem 0 0.25rem; }
+h2 { font-size: 1.25rem; margin: 2.25rem 0 0.5rem; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 0.35rem; }
+p, ul, ol, table { margin: 0 0 1rem; }
+li { margin-bottom: 0.4rem; }
+.meta { color: var(--ink-2); margin-bottom: 1.5rem; }
+.lead { font-size: 1.1rem; }
+a { color: var(--link); text-underline-offset: 0.2em; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+strong { font-weight: 700; }
+
+.note {
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+  border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0;
+}
+.note > :last-child { margin-bottom: 0; }
+
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--line); }
+th { color: var(--ink-2); font-weight: 600; }
+
+.cards { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: 0.75rem; }
+.cards a {
+  display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 1rem 1.25rem; text-decoration: none; color: var(--ink);
+}
+.cards a:hover { border-color: var(--accent); }
+.cards .t { display: block; font-size: 1.15rem; font-weight: 700; }
+.cards .d { display: block; margin-top: 0.2rem; font-size: 0.95rem; color: var(--ink-2); }
+
+footer.site { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 0.9rem; }
+footer.site a { color: var(--ink-2); }
+
+@media (prefers-reduced-motion: no-preference) { a, .cards a { transition: border-color 0.2s; } }
