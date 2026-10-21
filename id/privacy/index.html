@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <title>Kebijakan Privasi · Rupa</title>
-  <meta name="description" content="Kebijakan privasi Rupa: alat di HP tidak pernah mengunggah foto; edit AI cloud hanya dengan izinmu dan dihapus dalam 24 jam.">
+  <meta name="description" content="Kebijakan privasi Rupa: alat di HP tidak pernah mengunggah foto; edit AI cloud hanya dengan izinmu dan dihapus dari server Rupa dalam 24 jam.">
   <link rel="canonical" href="https://kofeintech.github.io/rupa-legal/id/privacy/">
   <link rel="alternate" hreflang="en" href="https://kofeintech.github.io/rupa-legal/en/privacy/">
   <link rel="alternate" hreflang="id" href="https://kofeintech.github.io/rupa-legal/id/privacy/">
@@ -54,8 +54,8 @@
 <ul>
   <li>Sebagian besar alat berjalan sepenuhnya di iPhone kamu. Foto yang kamu edit dengan alat ini tidak pernah diunggah.</li>
   <li>Foto hanya keluar dari iPhone kalau kamu memakai alat AI cloud dan setuju di layar persetujuan. Foto dikirim sebagai JPEG yang diperkecil, tanpa lokasi atau metadata lain.</li>
-  <li>Foto di cloud dihapus begitu sudah tidak dibutuhkan, dan selalu dalam 24 jam.</li>
-  <li>Kami tidak pernah memakai foto kamu untuk melatih AI. Kami tidak pernah menjual data kamu.</li>
+  <li>Foto di cloud dihapus begitu sudah tidak dibutuhkan, dan selalu dalam 24 jam. Untuk Ubah dengan AI, Google bisa menyimpannya sampai 55 hari untuk mencegah penyalahgunaan.</li>
+  <li>Rupa tidak pernah memakai foto kamu untuk melatih AI. Kami tidak pernah menjual data kamu.</li>
   <li>Tanpa akun, tanpa iklan, tanpa pelacakan, tanpa ID iklan.</li>
 </ul>
 </div>
@@ -68,23 +68,24 @@
 <p>Edit, riwayat, dan pengaturan kamu disimpan di penyimpanan pribadi Rupa di iPhone. Foto yang disimpan masuk ke galeri dengan resolusi penuh, dan lokasinya dihapus.</p>
 
 <h2>3. Alat AI cloud</h2>
-<p>Beberapa alat butuh tenaga komputasi yang lebih besar dari HP: <strong>Foto Jernih</strong>, <strong>Perbaiki Foto Lama</strong>, dan <strong>Hapus Objek</strong> (termasuk mode hapus tulisan). Alat ini berjalan di cloud dan hanya setelah kamu setuju di layar persetujuan yang muncul sebelum edit cloud pertama. Kalau kamu menolak, semua alat di HP tetap bisa dipakai.</p>
+<p>Beberapa alat butuh tenaga komputasi yang lebih besar dari HP: <strong>Foto Jernih</strong>, <strong>Perbaiki Foto Lama</strong>, <strong>Hapus Objek</strong> (termasuk mode hapus tulisan), dan <strong>Ubah dengan AI</strong>. Alat ini berjalan di cloud dan hanya setelah kamu setuju di layar persetujuan yang muncul sebelum edit cloud pertama. Kalau kamu menolak, semua alat di HP tetap bisa dipakai.</p>
 <p>Saat kamu memulai edit cloud:</p>
 <ul>
   <li><strong>Yang dikirim:</strong> hanya foto yang sedang kamu edit, diperkecil dan disimpan sebagai JPEG tanpa lokasi dan metadata lain (EXIF). Untuk Hapus Objek dan mode hapus tulisan, mask yang menandai area yang mau dihapus juga ikut dikirim.</li>
   <li><strong>Ke mana:</strong> ke backend kami di Google Firebase (Google Cloud, region Singapura asia-southeast1), lalu ke <strong>fal.ai</strong> (Features &amp; Labels, Inc., Amerika Serikat), penyedia AI yang menjalankan modelnya untuk kami.</li>
   <li><strong>Pemeriksaan konten:</strong> sebelum diedit, foto diperiksa otomatis untuk konten terlarang (misalnya konten seksual). Foto yang diblokir langsung dihapus dan edit itu tidak dihitung.</li>
   <li><strong>Penghapusan:</strong> foto asli kamu dihapus dari penyimpanan kami begitu proses selesai. Hasilnya dihapus begitu Rupa selesai mengunduhnya ke iPhone kamu. Yang tidak sempat diunduh akan dihapus otomatis, jadi <strong>semua foto di cloud hilang dalam 24 jam</strong> sejak diunggah. Fitur versioning dan “soft delete” di penyimpanan ini kami matikan, jadi foto yang sudah dihapus tidak bisa dipulihkan. Kami juga meminta fal.ai menghapus file sementaranya dalam satu jam.</li>
-  <li><strong>Bukan untuk melatih AI:</strong> kami tidak pernah memakai foto atau hasil edit kamu untuk melatih atau mengembangkan model AI.</li>
+  <li><strong>Bukan untuk melatih AI:</strong> Rupa tidak pernah memakai foto atau hasil edit kamu untuk melatih atau mengembangkan model AI.</li>
 </ul>
-<p>Kamu bisa menarik persetujuan kapan saja dengan mematikan AI Cloud di Pengaturan Rupa. Setelah itu alat cloud tidak bisa dipakai sampai kamu setuju lagi.</p>
+<p><strong>Ubah dengan AI.</strong> Saat kamu memakai Ubah dengan AI, Rupa mengirim salinan foto kamu yang diperkecil (tanpa lokasi atau metadata lain) dan teks yang kamu ketik ke fal.ai, yang menjalankan model gambar Gemini dari Google (Google LLC, Amerika Serikat) untuk membuat editnya. Rupa menghapus foto, teks, dan hasilnya dari server Rupa sendiri dalam 24 jam, dan meminta fal.ai untuk tidak menyimpan permintaannya serta menghapus file yang dihasilkan dalam satu jam. Google menyimpan prompt, gambar, dan hasil sampai 55 hari hanya untuk mendeteksi dan mencegah penyalahgunaan, dan menyatakan tidak memakainya untuk melatih modelnya. Gambar yang dibuat dengan Ubah dengan AI membawa watermark SynthID tak terlihat dari Google yang menandainya sebagai buatan AI.</p>
+<p>Rupa meminta persetujuan ini sekali, sebelum edit cloud pertama kamu, dan meminta lagi hanya kalau pemberitahuan ini berubah. Kamu bisa menarik persetujuan kapan saja: <strong>Pengaturan &gt; Hapus data cloud saya</strong> menghapus data cloud kamu dan mengatur ulang persetujuan, jadi Rupa akan bertanya lagi sebelum edit cloud berikutnya. Sampai kamu setuju lagi, tidak ada yang diunggah.</p>
 
 <h2>4. Data lain yang dipakai Rupa</h2>
 <ul>
   <li><strong>ID app anonim.</strong> Rupa tidak punya akun. Saat pertama dipakai, Firebase Authentication membuat ID anonim acak untuk instalasi kamu. ID ini tidak terhubung dengan nama, email, nomor HP, atau Apple Account kamu.</li>
   <li><strong>Penghitung edit gratis.</strong> Setiap iPhone dapat 3 edit AI cloud gratis. Untuk menghitungnya, termasuk kalau app di-install ulang, kami memakai DeviceCheck dari Apple, yang menyimpan dua bit per perangkat di Apple (angka 0 sampai 3). Isinya cuma itu.</li>
   <li><strong>Keaslian app.</strong> Firebase App Check dengan App Attest dari Apple memastikan permintaan datang dari app Rupa yang asli. Rupa juga menyimpan nomor instalasi acak di iPhone kamu dan mengirimnya ke backend kami bersama ID app anonim kamu, untuk mencegah penyalahgunaan (misalnya terlalu banyak permintaan per menit). Untuk pembatasan ini, backend kami hanya menyimpan hash berkunci dari alamat IP kamu, bukan alamat IP-nya.</li>
-  <li><strong>Catatan edit.</strong> Untuk setiap edit cloud, kami menyimpan catatan teknis singkat (alat, status, waktu, ukuran gambar, biaya) tanpa fotonya. Catatan ini terhapus otomatis sekitar 1 sampai 2 hari kemudian. Jumlah edit per bulan disimpan sampai 60 hari setelah bulan itu berakhir.</li>
+  <li><strong>Catatan edit.</strong> Untuk setiap edit cloud, kami menyimpan catatan teknis singkat (alat, status, waktu, ukuran gambar, biaya) tanpa fotonya. Catatan ini terhapus otomatis sekitar 1 sampai 2 hari kemudian. Jumlah edit per bulan disimpan sampai 60 hari setelah bulan itu berakhir. Kalau kamu melaporkan sebuah hasil, kami menyimpan alat, model, alasan kamu, dan kode pendek yang dibuat dari teksnya (bukan teksnya, bukan fotonya) selama 90 hari.</li>
   <li><strong>Pembelian.</strong> Pembayaran diurus oleh Apple. Kami tidak pernah melihat nama atau data pembayaran kamu. Untuk mengaktifkan Rupa Plus, kami menerima data transaksi bertanda tangan dari Apple (produk, ID transaksi, tanggal, status perpanjangan) dan memeriksanya lewat App Store Server API dari Apple.</li>
   <li><strong>Notifikasi.</strong> Kalau kamu mengizinkan notifikasi, kami menyimpan token push supaya bisa memberi tahu saat edit cloud selesai dan memperbarui Live Activity di Layar Kunci.</li>
   <li><strong>Diagnostik dan penggunaan.</strong> Firebase Crashlytics mengumpulkan laporan crash dan data performa. Firebase Analytics mengumpulkan aktivitas di app (misalnya alat yang dibuka), aktivitas pembelian in-app, ID instance app, model perangkat, versi iOS, bahasa, dan perkiraan wilayah dari alamat IP. Data ini <strong>tidak terhubung</strong> dengan ID app anonim kamu dan hanya dipakai untuk memperbaiki masalah dan mengembangkan Rupa.</li>
@@ -105,6 +106,7 @@
 <tbody>
 <tr><td>Google (Firebase / Google Cloud)</td><td>Backend, ID anonim, penyimpanan foto sementara, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapura; Analytics dan Crashlytics di Amerika Serikat</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Menjalankan model AI untuk alat cloud</td><td>Amerika Serikat</td></tr>
+<tr><td>Google LLC (Gemini, lewat fal.ai)</td><td>Menjalankan model gambar Gemini untuk Ubah dengan AI</td><td>Amerika Serikat</td></tr>
 <tr><td>Apple</td><td>Pembayaran App Store, DeviceCheck, App Attest, notifikasi push</td><td>Amerika Serikat dan lokasi Apple lainnya</td></tr>
 </tbody></table></div>
 <p>Setiap penyedia hanya boleh memakai data untuk memberikan layanannya kepada kami. Kami tidak menjual atau membagikan data kamu ke pihak lain, kecuali kalau diwajibkan hukum.</p>
@@ -120,7 +122,7 @@
 <p>Data dienkripsi saat dikirim. Saat kamu memulai edit cloud, Rupa mengunggah foto (dan mask-nya, untuk Hapus Objek dan mode hapus tulisan) langsung ke penyimpanan cloud kami, ke folder yang hanya bisa diakses oleh instalasi Rupa kamu dan backend kami. Backend kami hanya memakainya untuk menjalankan edit kamu.</p>
 
 <h2>10. Anak-anak</h2>
-<p>Rupa punya rating 13+ dan tidak ditujukan untuk anak di bawah 13 tahun. Kami tidak dengan sengaja memproses data anak di bawah 13 tahun. Kalau usiamu masih di bawah batas usia persetujuan di negaramu, minta izin orang tua atau wali sebelum memakai alat AI cloud. Kalau kamu merasa ada anak yang memakai alat cloud, hubungi kami dan datanya akan kami hapus.</p>
+<p>Rupa punya rating 18+ dan hanya ditujukan untuk orang dewasa. Kami tidak dengan sengaja memproses data siapa pun yang berusia di bawah 18 tahun. Kalau kamu merasa ada orang di bawah 18 tahun yang memakai alat cloud, hubungi kami dan datanya akan kami hapus.</p>
 
 <h2>11. Perubahan</h2>
 <p>Kalau kebijakan ini berubah, kami akan memperbarui halaman ini dan tanggal di bagian atas. Kalau perubahan itu menyangkut cara foto cloud ditangani, Rupa akan meminta persetujuan kamu lagi sebelum edit cloud berikutnya.</p>

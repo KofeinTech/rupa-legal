@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <title>Privacy Policy · Rupa</title>
-  <meta name="description" content="Rupa privacy policy: on-device tools never upload your photos; cloud AI edits only with your consent, deleted within 24 hours.">
+  <meta name="description" content="Rupa privacy policy: on-device tools never upload your photos; cloud AI edits only with your consent, deleted from Rupa’s servers within 24 hours.">
   <link rel="canonical" href="https://kofeintech.github.io/rupa-legal/en/privacy/">
   <link rel="alternate" hreflang="en" href="https://kofeintech.github.io/rupa-legal/en/privacy/">
   <link rel="alternate" hreflang="id" href="https://kofeintech.github.io/rupa-legal/id/privacy/">
@@ -54,8 +54,8 @@
 <ul>
   <li>Most tools run entirely on your iPhone. Photos you edit with them are never uploaded.</li>
   <li>A photo leaves your iPhone only when you start a cloud AI tool and agree in the consent screen. It is sent as a smaller JPEG without location or other metadata.</li>
-  <li>Cloud photos are deleted as soon as they are no longer needed, and always within 24 hours.</li>
-  <li>We never use your photos to train AI. We never sell your data.</li>
+  <li>Cloud photos are deleted as soon as they are no longer needed, and always within 24 hours. For AI change, Google may keep them for up to 55 days to prevent abuse.</li>
+  <li>Rupa never uses your photos to train AI. We never sell your data.</li>
   <li>No account, no ads, no tracking, no advertising ID.</li>
 </ul>
 </div>
@@ -68,23 +68,24 @@
 <p>Your edits, history and settings are stored in Rupa’s private storage on your iPhone. Saved photos go to your photo library at full resolution, with the location removed.</p>
 
 <h2>3. Cloud AI tools</h2>
-<p>A few tools need more computing power than a phone has: <strong>HD Enhance</strong>, <strong>Restore old photo</strong> and <strong>Object remover</strong> (including Remove text). They run in the cloud and only after you agree in the consent screen that Rupa shows before the first cloud edit. If you say no, every on-device tool keeps working.</p>
+<p>A few tools need more computing power than a phone has: <strong>HD Enhance</strong>, <strong>Restore old photo</strong>, <strong>Object remover</strong> (including Remove text) and <strong>AI change</strong>. They run in the cloud and only after you agree in the consent screen that Rupa shows before the first cloud edit. If you say no, every on-device tool keeps working.</p>
 <p>When you start a cloud edit:</p>
 <ul>
   <li><strong>What is sent:</strong> only the photo you are editing, resized and saved as a JPEG with location and other metadata (EXIF) removed. For Object remover and Remove text, the mask that marks the area to remove is sent too.</li>
   <li><strong>Where it goes:</strong> to our backend on Google Firebase (Google Cloud, Singapore region asia-southeast1), then to <strong>fal.ai</strong> (Features &amp; Labels, Inc., USA), the AI provider that runs the model for us.</li>
   <li><strong>Content check:</strong> before editing, the photo is checked automatically for prohibited content (for example sexual content). Blocked photos are deleted right away and the edit is not counted.</li>
   <li><strong>Deletion:</strong> your original is deleted from our storage as soon as processing finishes. The result is deleted as soon as Rupa has downloaded it to your iPhone. Anything not downloaded is deleted automatically, so <strong>every cloud photo is gone within 24 hours</strong> of upload. Versioning and “soft delete” are turned off for this storage, so deleted photos cannot be recovered. We also ask fal.ai to expire its temporary files within one hour.</li>
-  <li><strong>No training:</strong> we never use your photos or results to train or improve AI models.</li>
+  <li><strong>No training:</strong> Rupa never uses your photos or results to train or improve AI models.</li>
 </ul>
-<p>You can withdraw your consent at any time by turning off Cloud AI in Rupa’s Settings. Cloud tools then stop working until you agree again.</p>
+<p><strong>AI change.</strong> When you use AI change, Rupa sends a smaller copy of your photo (without location or other metadata) and the text you typed to fal.ai, which runs Google’s Gemini image model (Google LLC, USA) to make the edit. Rupa deletes your photo, your text and the result from its own servers within 24 hours, and tells fal.ai not to keep the request and to delete generated files within one hour. Google keeps prompts, images and results for up to 55 days only to detect and prevent abuse, and says it does not use them to train its models. Images made with AI change carry an invisible SynthID watermark from Google that marks them as AI-generated.</p>
+<p>Rupa asks for this consent once, before your first cloud edit, and again only if this notice changes. You can withdraw it at any time: <strong>Settings &gt; Delete my cloud data</strong> deletes your cloud data and resets the consent, so Rupa asks again before the next cloud edit. Until you agree again, nothing is uploaded.</p>
 
 <h2>4. Other data Rupa uses</h2>
 <ul>
   <li><strong>Anonymous app ID.</strong> Rupa has no accounts. On first use, Firebase Authentication creates a random anonymous ID for your installation. It is not linked to your name, email, phone number or Apple Account.</li>
   <li><strong>Free edit counter.</strong> Every iPhone gets 3 free cloud AI edits. To count them, even if you reinstall the app, we use Apple’s DeviceCheck, which lets us store two bits per device with Apple (a number from 0 to 3). It contains nothing else.</li>
   <li><strong>App integrity.</strong> Firebase App Check with Apple’s App Attest confirms requests come from the genuine Rupa app. Rupa also keeps a random install number on your iPhone and sends it to our backend together with your anonymous app ID, to limit abuse (for example, too many requests per minute). For these limits our backend stores only a keyed hash of your IP address, never the address itself.</li>
-  <li><strong>Edit records.</strong> For each cloud edit we keep a short technical record (tool, status, time, image size, cost), without the photo. It is deleted automatically about 1 to 2 days later. Monthly edit counts are kept until 60 days after the month ends.</li>
+  <li><strong>Edit records.</strong> For each cloud edit we keep a short technical record (tool, status, time, image size, cost), without the photo. It is deleted automatically about 1 to 2 days later. Monthly edit counts are kept until 60 days after the month ends. If you report a result, we keep the tool, model, your reason and a short code made from the text (not the text, not the photo) for 90 days.</li>
   <li><strong>Purchases.</strong> Payments are handled by Apple. We never see your name or payment details. To unlock Rupa Plus we receive Apple’s signed transaction data (product, transaction ID, dates, renewal status) and check it with Apple’s App Store Server API.</li>
   <li><strong>Notifications.</strong> If you allow notifications, we store a push token so we can tell you when a cloud edit is ready and update the Live Activity on your Lock Screen.</li>
   <li><strong>Diagnostics and usage.</strong> Firebase Crashlytics collects crash reports and performance data. Firebase Analytics collects app usage events (for example which tool was opened), in-app purchase events, an app-instance ID, device model, iOS version, language and an approximate region derived from your IP address. This data is <strong>not linked</strong> to your anonymous app ID and is used only to fix problems and improve Rupa.</li>
@@ -105,6 +106,7 @@
 <tbody>
 <tr><td>Google (Firebase / Google Cloud)</td><td>Backend, anonymous ID, temporary photo storage, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapore; Analytics and Crashlytics in the USA</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Runs the AI models for cloud tools</td><td>USA</td></tr>
+<tr><td>Google LLC (Gemini, via fal.ai)</td><td>Runs the Gemini image model for AI change</td><td>USA</td></tr>
 <tr><td>Apple</td><td>App Store payments, DeviceCheck, App Attest, push notifications</td><td>USA and other Apple locations</td></tr>
 </tbody></table></div>
 <p>Each provider may use the data only to provide its service to us. We do not sell or share your data with anyone else, except if the law requires it.</p>
@@ -120,7 +122,7 @@
 <p>Data is encrypted in transit. When you start a cloud edit, Rupa uploads the photo (and, for Object remover and Remove text, the mask) directly to our cloud storage, into a folder that only your installation of Rupa and our backend can access. Our backend uses it only to run your edit.</p>
 
 <h2>10. Children</h2>
-<p>Rupa is rated 13+ and is not meant for children under 13. We do not knowingly process data of children under 13. If you are under the age of digital consent where you live, ask a parent or guardian before using cloud AI tools. If you think a child has used a cloud tool, contact us and we will delete the data.</p>
+<p>Rupa is rated 18+ and is meant for adults only. We do not knowingly process data of anyone under 18. If you think someone under 18 has used a cloud tool, contact us and we will delete the data.</p>
 
 <h2>11. Changes</h2>
 <p>If we change this policy, we will update this page and the date at the top. If a change affects how cloud photos are handled, Rupa will ask for your consent again before the next cloud edit.</p>

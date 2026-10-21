@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <title>Política de Privacidade · Rupa</title>
-  <meta name="description" content="Política de privacidade do Rupa: as ferramentas no aparelho nunca enviam suas fotos; edições com IA na nuvem só com o seu consentimento, apagadas em até 24 horas.">
+  <meta name="description" content="Política de privacidade do Rupa: as ferramentas no aparelho nunca enviam suas fotos; edições com IA na nuvem só com o seu consentimento, apagadas dos servidores do Rupa em até 24 horas.">
   <link rel="canonical" href="https://kofeintech.github.io/rupa-legal/pt-br/privacy/">
   <link rel="alternate" hreflang="en" href="https://kofeintech.github.io/rupa-legal/en/privacy/">
   <link rel="alternate" hreflang="id" href="https://kofeintech.github.io/rupa-legal/id/privacy/">
@@ -54,8 +54,8 @@
 <ul>
   <li>A maioria das ferramentas funciona totalmente no seu iPhone. As fotos editadas com elas nunca são enviadas.</li>
   <li>Uma foto só sai do seu iPhone quando você usa uma ferramenta de IA na nuvem e concorda na tela de consentimento. Ela é enviada como um JPEG menor, sem localização nem outros metadados.</li>
-  <li>As fotos na nuvem são apagadas assim que deixam de ser necessárias e sempre em até 24 horas.</li>
-  <li>Nunca usamos suas fotos para treinar IA. Nunca vendemos seus dados.</li>
+  <li>As fotos na nuvem são apagadas assim que deixam de ser necessárias e sempre em até 24 horas. No Mudar com IA, o Google pode guardá-las por até 55 dias para evitar abusos.</li>
+  <li>O Rupa nunca usa suas fotos para treinar IA. Nunca vendemos seus dados.</li>
   <li>Sem conta, sem anúncios, sem rastreamento, sem identificador de publicidade.</li>
 </ul>
 </div>
@@ -68,23 +68,24 @@
 <p>Suas edições, histórico e ajustes ficam no armazenamento privado do Rupa no iPhone. As fotos salvas vão para a sua fototeca em resolução máxima, sem a localização.</p>
 
 <h2>3. Ferramentas de IA na nuvem</h2>
-<p>Algumas ferramentas precisam de mais poder de processamento do que um celular tem: <strong>Melhorar Foto em HD</strong>, <strong>Restaurar Foto Antiga</strong> e <strong>Remover Objeto</strong> (incluindo o modo remover texto). Elas rodam na nuvem e só depois que você concorda na tela de consentimento que o Rupa mostra antes da primeira edição na nuvem. Se você disser não, todas as ferramentas do aparelho continuam funcionando.</p>
+<p>Algumas ferramentas precisam de mais poder de processamento do que um celular tem: <strong>Melhorar Foto em HD</strong>, <strong>Restaurar Foto Antiga</strong>, <strong>Remover Objeto</strong> (incluindo o modo remover texto) e <strong>Mudar com IA</strong>. Elas rodam na nuvem e só depois que você concorda na tela de consentimento que o Rupa mostra antes da primeira edição na nuvem. Se você disser não, todas as ferramentas do aparelho continuam funcionando.</p>
 <p>Quando você inicia uma edição na nuvem:</p>
 <ul>
   <li><strong>O que é enviado:</strong> só a foto que você está editando, reduzida e salva como JPEG, sem localização e outros metadados (EXIF). No Remover Objeto e no modo remover texto, também é enviada a máscara que marca a área a ser removida.</li>
   <li><strong>Para onde vai:</strong> para o nosso backend no Google Firebase (Google Cloud, região de Singapura asia-southeast1) e depois para a <strong>fal.ai</strong> (Features &amp; Labels, Inc., EUA), a provedora de IA que roda o modelo para nós.</li>
   <li><strong>Verificação de conteúdo:</strong> antes da edição, a foto é verificada automaticamente para detectar conteúdo proibido (por exemplo, conteúdo sexual). Fotos bloqueadas são apagadas na hora e a edição não é contada.</li>
   <li><strong>Exclusão:</strong> a foto original é apagada do nosso armazenamento assim que o processamento termina. O resultado é apagado assim que o Rupa termina de baixá-lo no seu iPhone. O que não for baixado é apagado automaticamente, então <strong>toda foto na nuvem some em até 24 horas</strong> após o envio. O versionamento e a “exclusão reversível” (soft delete) desse armazenamento estão desativados, então fotos apagadas não podem ser recuperadas. Também pedimos à fal.ai que os arquivos temporários dela expirem em até uma hora.</li>
-  <li><strong>Sem treinamento:</strong> nunca usamos suas fotos ou resultados para treinar ou melhorar modelos de IA.</li>
+  <li><strong>Sem treinamento:</strong> o Rupa nunca usa suas fotos ou resultados para treinar ou melhorar modelos de IA.</li>
 </ul>
-<p>Você pode revogar o consentimento a qualquer momento desativando a IA na nuvem nos Ajustes do Rupa. As ferramentas na nuvem param de funcionar até você concordar de novo.</p>
+<p><strong>Mudar com IA.</strong> Quando você usa o Mudar com IA, o Rupa envia uma cópia menor da sua foto (sem localização nem outros metadados) e o texto que você digitou para a fal.ai, que roda o modelo de imagem Gemini do Google (Google LLC, EUA) para fazer a edição. O Rupa apaga a sua foto, o seu texto e o resultado dos próprios servidores em até 24 horas e pede à fal.ai que não guarde a solicitação e apague os arquivos gerados em até uma hora. O Google guarda prompts, imagens e resultados por até 55 dias só para detectar e evitar abusos, e diz que não os usa para treinar seus modelos. As imagens feitas com o Mudar com IA levam uma marca d’água invisível SynthID do Google, que as identifica como geradas por IA.</p>
+<p>O Rupa pede esse consentimento uma vez, antes da sua primeira edição na nuvem, e só pede de novo se este aviso mudar. Você pode revogá-lo a qualquer momento: <strong>Ajustes &gt; Apagar meus dados na nuvem</strong> apaga seus dados na nuvem e zera o consentimento, então o Rupa pergunta de novo antes da próxima edição na nuvem. Até você concordar de novo, nada é enviado.</p>
 
 <h2>4. Outros dados que o Rupa usa</h2>
 <ul>
   <li><strong>ID anônimo do app.</strong> O Rupa não tem contas. No primeiro uso, o Firebase Authentication cria um ID anônimo aleatório para a sua instalação. Ele não está ligado ao seu nome, e-mail, telefone ou Conta Apple.</li>
   <li><strong>Contador de edições grátis.</strong> Cada iPhone ganha 3 edições com IA na nuvem grátis. Para contá-las, mesmo se você reinstalar o app, usamos o DeviceCheck da Apple, que permite guardar dois bits por aparelho na Apple (um número de 0 a 3). Não há mais nada ali.</li>
   <li><strong>Integridade do app.</strong> O Firebase App Check com o App Attest da Apple confirma que as solicitações vêm do app Rupa original. O Rupa também guarda no seu iPhone um número de instalação aleatório e o envia ao nosso backend junto com o seu ID anônimo, para limitar abusos (por exemplo, solicitações demais por minuto). Para esses limites, o nosso backend guarda só um hash com chave do seu endereço IP, nunca o endereço em si.</li>
-  <li><strong>Registros de edição.</strong> Para cada edição na nuvem, guardamos um registro técnico curto (ferramenta, status, horário, tamanho da imagem, custo), sem a foto. Ele é apagado automaticamente cerca de 1 a 2 dias depois. A contagem mensal de edições fica guardada até 60 dias após o fim do mês.</li>
+  <li><strong>Registros de edição.</strong> Para cada edição na nuvem, guardamos um registro técnico curto (ferramenta, status, horário, tamanho da imagem, custo), sem a foto. Ele é apagado automaticamente cerca de 1 a 2 dias depois. A contagem mensal de edições fica guardada até 60 dias após o fim do mês. Se você denunciar um resultado, guardamos a ferramenta, o modelo, o seu motivo e um código curto gerado a partir do texto (não o texto, não a foto) por 90 dias.</li>
   <li><strong>Compras.</strong> Os pagamentos são feitos pela Apple. Nunca vemos seu nome ou dados de pagamento. Para liberar o Rupa Plus, recebemos os dados de transação assinados pela Apple (produto, ID da transação, datas, status de renovação) e os verificamos com a App Store Server API da Apple.</li>
   <li><strong>Notificações.</strong> Se você permitir notificações, guardamos um token de push para avisar quando a edição na nuvem estiver pronta e atualizar a Atividade ao Vivo na Tela Bloqueada.</li>
   <li><strong>Diagnóstico e uso.</strong> O Firebase Crashlytics coleta relatórios de falhas e dados de desempenho. O Firebase Analytics coleta eventos de uso do app (por exemplo, qual ferramenta foi aberta), eventos de compra no app, um ID da instância do app, modelo do aparelho, versão do iOS, idioma e uma região aproximada obtida pelo endereço IP. Esses dados <strong>não são vinculados</strong> ao seu ID anônimo e servem só para corrigir problemas e melhorar o Rupa.</li>
@@ -105,6 +106,7 @@
 <tbody>
 <tr><td>Google (Firebase / Google Cloud)</td><td>Backend, ID anônimo, armazenamento temporário de fotos, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapura; Analytics e Crashlytics nos EUA</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Roda os modelos de IA das ferramentas na nuvem</td><td>EUA</td></tr>
+<tr><td>Google LLC (Gemini, via fal.ai)</td><td>Roda o modelo de imagem Gemini do Mudar com IA</td><td>EUA</td></tr>
 <tr><td>Apple</td><td>Pagamentos da App Store, DeviceCheck, App Attest, notificações push</td><td>EUA e outros locais da Apple</td></tr>
 </tbody></table></div>
 <p>Cada prestador só pode usar os dados para nos prestar o seu serviço. Não vendemos nem compartilhamos seus dados com mais ninguém, exceto quando a lei exigir.</p>
@@ -120,7 +122,7 @@
 <p>Os dados são criptografados em trânsito. Quando você inicia uma edição na nuvem, o Rupa envia a foto (e, no Remover Objeto e no modo remover texto, a máscara) direto para o nosso armazenamento na nuvem, em uma pasta que só a sua instalação do Rupa e o nosso backend podem acessar. O nosso backend usa esses arquivos só para fazer a sua edição.</p>
 
 <h2>10. Crianças e adolescentes</h2>
-<p>O Rupa tem classificação 13+ e não é destinado a crianças menores de 13 anos. Não tratamos intencionalmente dados de crianças menores de 13 anos. Se você é menor de 18 anos, peça autorização a um dos pais ou responsável antes de usar as ferramentas de IA na nuvem. Se você acha que uma criança usou uma ferramenta na nuvem, fale com a gente e apagaremos os dados.</p>
+<p>O Rupa tem classificação 18+ e é destinado só a adultos. Não tratamos intencionalmente dados de ninguém com menos de 18 anos. Se você acha que alguém com menos de 18 anos usou uma ferramenta na nuvem, fale com a gente e apagaremos os dados.</p>
 
 <h2>11. Alterações</h2>
 <p>Se esta política mudar, atualizaremos esta página e a data no topo. Se a mudança afetar o tratamento das fotos na nuvem, o Rupa vai pedir seu consentimento de novo antes da próxima edição na nuvem.</p>

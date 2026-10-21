@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <title>Privacy Policy · Rupa</title>
-  <meta name="description" content="Privacy policy ng Rupa: hindi kailanman nag-a-upload ang on-device tools; ang cloud AI edits ay may pahintulot mo lang at binubura sa loob ng 24 oras.">
+  <meta name="description" content="Privacy policy ng Rupa: hindi kailanman nag-a-upload ang on-device tools; ang cloud AI edits ay may pahintulot mo lang at binubura sa servers ng Rupa sa loob ng 24 oras.">
   <link rel="canonical" href="https://kofeintech.github.io/rupa-legal/fil/privacy/">
   <link rel="alternate" hreflang="en" href="https://kofeintech.github.io/rupa-legal/en/privacy/">
   <link rel="alternate" hreflang="id" href="https://kofeintech.github.io/rupa-legal/id/privacy/">
@@ -54,8 +54,8 @@
 <ul>
   <li>Karamihan ng tools ay tumatakbo nang buo sa iPhone mo. Hindi kailanman ina-upload ang mga photo na ine-edit mo gamit ang mga ito.</li>
   <li>Lumalabas lang ang photo sa iPhone mo kapag nagsimula ka ng cloud AI tool at pumayag ka sa consent screen. Ipinapadala ito bilang mas maliit na JPEG, walang location o ibang metadata.</li>
-  <li>Binubura ang mga photo sa cloud kapag hindi na kailangan, at palaging sa loob ng 24 oras.</li>
-  <li>Hindi namin kailanman ginagamit ang photos mo para mag-train ng AI. Hindi namin kailanman ibinebenta ang data mo.</li>
+  <li>Binubura ang mga photo sa cloud kapag hindi na kailangan, at palaging sa loob ng 24 oras. Sa AI Change, puwedeng itago ng Google ang mga ito nang hanggang 55 araw para pigilan ang abuso.</li>
+  <li>Hindi kailanman ginagamit ng Rupa ang photos mo para mag-train ng AI. Hindi namin kailanman ibinebenta ang data mo.</li>
   <li>Walang account, walang ads, walang tracking, walang advertising ID.</li>
 </ul>
 </div>
@@ -68,23 +68,24 @@
 <p>Ang mga edit, history at settings mo ay naka-save sa private storage ng Rupa sa iPhone mo. Ang mga sine-save na photo ay napupunta sa photo library mo nang full resolution, at tanggal ang location.</p>
 
 <h2>3. Cloud AI tools</h2>
-<p>May ilang tool na kailangan ng mas malakas na computing power kaysa sa phone: <strong>HD Enhance</strong>, <strong>Restore Old Photo</strong> at <strong>Object Remover</strong> (kasama ang Remove Text). Tumatakbo sila sa cloud at gagana lang pagkatapos mong pumayag sa consent screen na lumalabas bago ang unang cloud edit. Kung tumanggi ka, gagana pa rin lahat ng on-device tools.</p>
+<p>May ilang tool na kailangan ng mas malakas na computing power kaysa sa phone: <strong>HD Enhance</strong>, <strong>Restore Old Photo</strong>, <strong>Object Remover</strong> (kasama ang Remove Text) at <strong>AI Change</strong>. Tumatakbo sila sa cloud at gagana lang pagkatapos mong pumayag sa consent screen na lumalabas bago ang unang cloud edit. Kung tumanggi ka, gagana pa rin lahat ng on-device tools.</p>
 <p>Kapag nagsimula ka ng cloud edit:</p>
 <ul>
   <li><strong>Ano ang ipinapadala:</strong> ang photo lang na ine-edit mo, pinaliit at sine-save bilang JPEG na tanggal ang location at ibang metadata (EXIF). Sa Object Remover at Remove Text, ipinapadala rin ang mask na nagmamarka sa area na buburahin.</li>
   <li><strong>Saan ito napupunta:</strong> sa backend namin sa Google Firebase (Google Cloud, Singapore region asia-southeast1), tapos sa <strong>fal.ai</strong> (Features &amp; Labels, Inc., USA), ang AI provider na nagpapatakbo ng model para sa amin.</li>
   <li><strong>Content check:</strong> bago i-edit, awtomatikong chine-check ang photo kung may bawal na content (halimbawa, sexual content). Ang naka-block na photo ay agad binubura at hindi binibilang ang edit.</li>
   <li><strong>Pagbura:</strong> binubura ang original mo sa storage namin pagkatapos ma-process. Binubura ang result pagka-download ng Rupa sa iPhone mo. Lahat ng hindi na-download ay awtomatikong binubura, kaya <strong>wala na ang bawat cloud photo sa loob ng 24 oras</strong> mula sa upload. Naka-off ang versioning at “soft delete” sa storage na ito, kaya hindi na mababawi ang binurang photo. Hinihiling din namin sa fal.ai na mag-expire ang mga temporary file nila sa loob ng isang oras.</li>
-  <li><strong>Walang training:</strong> hindi namin kailanman ginagamit ang photos o results mo para mag-train o mag-improve ng AI models.</li>
+  <li><strong>Walang training:</strong> hindi kailanman ginagamit ng Rupa ang photos o results mo para mag-train o mag-improve ng AI models.</li>
 </ul>
-<p>Puwede mong bawiin ang pahintulot mo anumang oras sa pag-off ng Cloud AI sa Settings ng Rupa. Hihinto ang cloud tools hanggang pumayag ka ulit.</p>
+<p><strong>AI Change.</strong> Kapag ginamit mo ang AI Change, nagpapadala ang Rupa ng mas maliit na kopya ng photo mo (walang location o ibang metadata) at ng text na tina-type mo sa fal.ai, na nagpapatakbo ng Gemini image model ng Google (Google LLC, USA) para gawin ang edit. Binubura ng Rupa ang photo mo, ang text mo at ang result mula sa sarili nitong servers sa loob ng 24 oras, at sinasabihan ang fal.ai na huwag itago ang request at burahin ang mga nagawang file sa loob ng isang oras. Tinatago ng Google ang prompts, images at results nang hanggang 55 araw para lang ma-detect at mapigilan ang abuso, at sinasabi nitong hindi nito ginagamit ang mga ito para mag-train ng models nito. May invisible na SynthID watermark mula sa Google ang mga image na gawa sa AI Change, na nagmamarka sa mga ito bilang AI-generated.</p>
+<p>Isang beses lang hihingin ng Rupa ang pahintulot na ito, bago ang una mong cloud edit, at hihingin lang ulit kapag nagbago ang abisong ito. Puwede mo itong bawiin anumang oras: binubura ng <strong>Settings &gt; Delete my cloud data</strong> ang cloud data mo at nire-reset ang pahintulot, kaya magtatanong ulit ang Rupa bago ang susunod na cloud edit. Hangga’t hindi ka pumapayag ulit, walang ina-upload.</p>
 
 <h2>4. Iba pang data na ginagamit ng Rupa</h2>
 <ul>
   <li><strong>Anonymous app ID.</strong> Walang account sa Rupa. Sa unang gamit, gumagawa ang Firebase Authentication ng random na anonymous ID para sa installation mo. Hindi ito naka-link sa pangalan, email, phone number o Apple Account mo.</li>
   <li><strong>Counter ng libreng edits.</strong> May 3 libreng cloud AI edits ang bawat iPhone. Para mabilang ito, kahit mag-reinstall ka, ginagamit namin ang DeviceCheck ng Apple, na nagse-save ng dalawang bit bawat device sa Apple (numerong 0 hanggang 3). Wala nang iba pang laman.</li>
   <li><strong>App integrity.</strong> Kinukumpirma ng Firebase App Check kasama ang App Attest ng Apple na galing sa totoong Rupa app ang mga request. May random na install number din ang Rupa sa iPhone mo, na ipinapadala sa backend namin kasama ng anonymous app ID mo, para limitahan ang abuse (halimbawa, sobrang daming request kada minuto). Para sa limit na ito, keyed hash lang ng IP address mo ang sine-save ng backend namin, hindi ang mismong IP address.</li>
-  <li><strong>Edit records.</strong> Sa bawat cloud edit, nagtatago kami ng maikling technical record (tool, status, oras, laki ng image, cost), walang photo. Awtomatiko itong nabubura mga 1 hanggang 2 araw pagkatapos. Ang monthly edit count ay tinatago hanggang 60 araw pagkatapos ng buwan.</li>
+  <li><strong>Edit records.</strong> Sa bawat cloud edit, nagtatago kami ng maikling technical record (tool, status, oras, laki ng image, cost), walang photo. Awtomatiko itong nabubura mga 1 hanggang 2 araw pagkatapos. Ang monthly edit count ay tinatago hanggang 60 araw pagkatapos ng buwan. Kapag nag-report ka ng result, tinatago namin nang 90 araw ang tool, model, ang dahilan mo at isang maikling code na ginawa mula sa text (hindi ang text, hindi ang photo).</li>
   <li><strong>Purchases.</strong> Ang Apple ang humahawak ng bayad. Hindi namin nakikita ang pangalan o payment details mo. Para ma-unlock ang Rupa Plus, natatanggap namin ang signed transaction data ng Apple (product, transaction ID, mga petsa, renewal status) at chine-check namin ito gamit ang App Store Server API ng Apple.</li>
   <li><strong>Notifications.</strong> Kung papayagan mo ang notifications, nagse-save kami ng push token para masabihan ka kapag ready na ang cloud edit at ma-update ang Live Activity sa Lock Screen mo.</li>
   <li><strong>Diagnostics at usage.</strong> Kumukuha ang Firebase Crashlytics ng crash reports at performance data. Kumukuha ang Firebase Analytics ng app usage events (halimbawa, kung aling tool ang binuksan), in-app purchase events, app-instance ID, device model, iOS version, wika at tinatayang region mula sa IP address. <strong>Hindi naka-link</strong> ang data na ito sa anonymous app ID mo at ginagamit lang para ayusin ang problema at i-improve ang Rupa.</li>
@@ -105,6 +106,7 @@
 <tbody>
 <tr><td>Google (Firebase / Google Cloud)</td><td>Backend, anonymous ID, pansamantalang photo storage, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapore; Analytics at Crashlytics sa USA</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Nagpapatakbo ng AI models para sa cloud tools</td><td>USA</td></tr>
+<tr><td>Google LLC (Gemini, sa pamamagitan ng fal.ai)</td><td>Nagpapatakbo ng Gemini image model para sa AI Change</td><td>USA</td></tr>
 <tr><td>Apple</td><td>App Store payments, DeviceCheck, App Attest, push notifications</td><td>USA at iba pang lokasyon ng Apple</td></tr>
 </tbody></table></div>
 <p>Puwede lang gamitin ng bawat provider ang data para ibigay ang serbisyo nila sa amin. Hindi namin ibinebenta o ibinabahagi ang data mo sa iba, maliban kung hinihingi ng batas.</p>
@@ -120,7 +122,7 @@
 <p>Naka-encrypt ang data habang ipinapadala. Kapag nagsimula ka ng cloud edit, diretsong ina-upload ng Rupa ang photo (at ang mask, para sa Object Remover at Remove Text) sa cloud storage namin, sa folder na ang Rupa installation mo at ang backend lang namin ang may access. Ginagamit lang ito ng backend namin para gawin ang edit mo.</p>
 
 <h2>10. Mga bata</h2>
-<p>Rated 13+ ang Rupa at hindi ito para sa mga batang wala pang 13 taong gulang. Hindi namin sinasadyang mag-process ng data ng batang wala pang 13. Kung wala ka pa sa edad na puwedeng mag-consent sa lugar mo, magpaalam muna sa magulang o guardian bago gumamit ng cloud AI tools. Kung sa tingin mo may batang gumamit ng cloud tool, mag-email sa amin at buburahin namin ang data.</p>
+<p>Rated 18+ ang Rupa at para lang ito sa mga adult. Hindi namin sinasadyang mag-process ng data ng sinumang wala pang 18. Kung sa tingin mo may wala pang 18 na gumamit ng cloud tool, mag-email sa amin at buburahin namin ang data.</p>
 
 <h2>11. Mga pagbabago</h2>
 <p>Kapag binago namin ang policy na ito, ia-update namin ang page na ito at ang petsa sa itaas. Kung apektado ang paghawak ng cloud photos, hihingi ulit ng pahintulot ang Rupa bago ang susunod na cloud edit.</p>
