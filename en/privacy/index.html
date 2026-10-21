@@ -83,11 +83,11 @@
 <ul>
   <li><strong>Anonymous app ID.</strong> Rupa has no accounts. On first use, Firebase Authentication creates a random anonymous ID for your installation. It is not linked to your name, email, phone number or Apple Account.</li>
   <li><strong>Free edit counter.</strong> Every iPhone gets 3 free cloud AI edits. To count them, even if you reinstall the app, we use Apple’s DeviceCheck, which lets us store two bits per device with Apple (a number from 0 to 3). It contains nothing else.</li>
-  <li><strong>App integrity.</strong> Firebase App Check with Apple’s App Attest confirms requests come from the genuine Rupa app. Rupa also keeps a random install number on your iPhone to limit abuse (for example, too many requests per minute).</li>
+  <li><strong>App integrity.</strong> Firebase App Check with Apple’s App Attest confirms requests come from the genuine Rupa app. Rupa also keeps a random install number on your iPhone and sends it to our backend together with your anonymous app ID, to limit abuse (for example, too many requests per minute). For these limits our backend stores only a keyed hash of your IP address, never the address itself.</li>
   <li><strong>Edit records.</strong> For each cloud edit we keep a short technical record (tool, status, time, image size, cost), without the photo. It is deleted automatically about 1 to 2 days later. Monthly edit counts are kept until 60 days after the month ends.</li>
   <li><strong>Purchases.</strong> Payments are handled by Apple. We never see your name or payment details. To unlock Rupa Plus we receive Apple’s signed transaction data (product, transaction ID, dates, renewal status) and check it with Apple’s App Store Server API.</li>
   <li><strong>Notifications.</strong> If you allow notifications, we store a push token so we can tell you when a cloud edit is ready and update the Live Activity on your Lock Screen.</li>
-  <li><strong>Diagnostics and usage.</strong> Firebase Crashlytics collects crash reports and performance data. Firebase Analytics collects app usage events (for example which tool was opened), an app-instance ID, device model, iOS version, language and an approximate region derived from your IP address. This data is <strong>not linked</strong> to your anonymous app ID and is used only to fix problems and improve Rupa.</li>
+  <li><strong>Diagnostics and usage.</strong> Firebase Crashlytics collects crash reports and performance data. Firebase Analytics collects app usage events (for example which tool was opened), in-app purchase events, an app-instance ID, device model, iOS version, language and an approximate region derived from your IP address. This data is <strong>not linked</strong> to your anonymous app ID and is used only to fix problems and improve Rupa.</li>
 </ul>
 <p>Rupa does not use the advertising identifier (IDFA), does not ask for tracking permission, does not show ads and does not track you across other apps or websites.</p>
 
@@ -117,7 +117,7 @@
 <p>Because Rupa has no accounts, we can only find your data through the app. The fastest way to delete it is <strong>Settings &gt; Delete my cloud data</strong>. See <a href="../delete/">Delete your data</a> for all options. We answer requests within 15 days.</p>
 
 <h2>9. Security</h2>
-<p>Data is encrypted in transit. Cloud photos are stored in access-restricted storage that only your installation of Rupa can read, and only our backend can write.</p>
+<p>Data is encrypted in transit. When you start a cloud edit, Rupa uploads the photo (and, for Object remover and Remove text, the mask) directly to our cloud storage, into a folder that only your installation of Rupa and our backend can access. Our backend uses it only to run your edit.</p>
 
 <h2>10. Children</h2>
 <p>Rupa is rated 13+ and is not meant for children under 13. We do not knowingly process data of children under 13. If you are under the age of digital consent where you live, ask a parent or guardian before using cloud AI tools. If you think a child has used a cloud tool, contact us and we will delete the data.</p>

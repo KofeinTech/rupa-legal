@@ -83,11 +83,11 @@
 <ul>
   <li><strong>ID anônimo do app.</strong> O Rupa não tem contas. No primeiro uso, o Firebase Authentication cria um ID anônimo aleatório para a sua instalação. Ele não está ligado ao seu nome, e-mail, telefone ou Conta Apple.</li>
   <li><strong>Contador de edições grátis.</strong> Cada iPhone ganha 3 edições com IA na nuvem grátis. Para contá-las, mesmo se você reinstalar o app, usamos o DeviceCheck da Apple, que permite guardar dois bits por aparelho na Apple (um número de 0 a 3). Não há mais nada ali.</li>
-  <li><strong>Integridade do app.</strong> O Firebase App Check com o App Attest da Apple confirma que as solicitações vêm do app Rupa original. O Rupa também guarda no seu iPhone um número de instalação aleatório para limitar abusos (por exemplo, solicitações demais por minuto).</li>
+  <li><strong>Integridade do app.</strong> O Firebase App Check com o App Attest da Apple confirma que as solicitações vêm do app Rupa original. O Rupa também guarda no seu iPhone um número de instalação aleatório e o envia ao nosso backend junto com o seu ID anônimo, para limitar abusos (por exemplo, solicitações demais por minuto). Para esses limites, o nosso backend guarda só um hash com chave do seu endereço IP, nunca o endereço em si.</li>
   <li><strong>Registros de edição.</strong> Para cada edição na nuvem, guardamos um registro técnico curto (ferramenta, status, horário, tamanho da imagem, custo), sem a foto. Ele é apagado automaticamente cerca de 1 a 2 dias depois. A contagem mensal de edições fica guardada até 60 dias após o fim do mês.</li>
   <li><strong>Compras.</strong> Os pagamentos são feitos pela Apple. Nunca vemos seu nome ou dados de pagamento. Para liberar o Rupa Plus, recebemos os dados de transação assinados pela Apple (produto, ID da transação, datas, status de renovação) e os verificamos com a App Store Server API da Apple.</li>
   <li><strong>Notificações.</strong> Se você permitir notificações, guardamos um token de push para avisar quando a edição na nuvem estiver pronta e atualizar a Atividade ao Vivo na Tela Bloqueada.</li>
-  <li><strong>Diagnóstico e uso.</strong> O Firebase Crashlytics coleta relatórios de falhas e dados de desempenho. O Firebase Analytics coleta eventos de uso do app (por exemplo, qual ferramenta foi aberta), um ID da instância do app, modelo do aparelho, versão do iOS, idioma e uma região aproximada obtida pelo endereço IP. Esses dados <strong>não são vinculados</strong> ao seu ID anônimo e servem só para corrigir problemas e melhorar o Rupa.</li>
+  <li><strong>Diagnóstico e uso.</strong> O Firebase Crashlytics coleta relatórios de falhas e dados de desempenho. O Firebase Analytics coleta eventos de uso do app (por exemplo, qual ferramenta foi aberta), eventos de compra no app, um ID da instância do app, modelo do aparelho, versão do iOS, idioma e uma região aproximada obtida pelo endereço IP. Esses dados <strong>não são vinculados</strong> ao seu ID anônimo e servem só para corrigir problemas e melhorar o Rupa.</li>
 </ul>
 <p>O Rupa não usa o identificador de publicidade (IDFA), não pede permissão de rastreamento, não mostra anúncios e não rastreia você em outros apps ou sites.</p>
 
@@ -117,7 +117,7 @@
 <p>Como o Rupa não tem contas, só conseguimos encontrar seus dados pelo app. O jeito mais rápido de apagá-los é em <strong>Ajustes &gt; Apagar meus dados na nuvem</strong>. Veja todas as opções em <a href="../delete/">Apagar seus dados</a>. Respondemos às solicitações em até 15 dias.</p>
 
 <h2>9. Segurança</h2>
-<p>Os dados são criptografados em trânsito. As fotos na nuvem ficam em um armazenamento de acesso restrito que só a sua instalação do Rupa pode ler e só o nosso backend pode gravar.</p>
+<p>Os dados são criptografados em trânsito. Quando você inicia uma edição na nuvem, o Rupa envia a foto (e, no Remover Objeto e no modo remover texto, a máscara) direto para o nosso armazenamento na nuvem, em uma pasta que só a sua instalação do Rupa e o nosso backend podem acessar. O nosso backend usa esses arquivos só para fazer a sua edição.</p>
 
 <h2>10. Crianças e adolescentes</h2>
 <p>O Rupa tem classificação 13+ e não é destinado a crianças menores de 13 anos. Não tratamos intencionalmente dados de crianças menores de 13 anos. Se você é menor de 18 anos, peça autorização a um dos pais ou responsável antes de usar as ferramentas de IA na nuvem. Se você acha que uma criança usou uma ferramenta na nuvem, fale com a gente e apagaremos os dados.</p>

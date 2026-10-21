@@ -83,11 +83,11 @@
 <ul>
   <li><strong>ID app anonim.</strong> Rupa tidak punya akun. Saat pertama dipakai, Firebase Authentication membuat ID anonim acak untuk instalasi kamu. ID ini tidak terhubung dengan nama, email, nomor HP, atau Apple Account kamu.</li>
   <li><strong>Penghitung edit gratis.</strong> Setiap iPhone dapat 3 edit AI cloud gratis. Untuk menghitungnya, termasuk kalau app di-install ulang, kami memakai DeviceCheck dari Apple, yang menyimpan dua bit per perangkat di Apple (angka 0 sampai 3). Isinya cuma itu.</li>
-  <li><strong>Keaslian app.</strong> Firebase App Check dengan App Attest dari Apple memastikan permintaan datang dari app Rupa yang asli. Rupa juga menyimpan nomor instalasi acak di iPhone kamu untuk mencegah penyalahgunaan (misalnya terlalu banyak permintaan per menit).</li>
+  <li><strong>Keaslian app.</strong> Firebase App Check dengan App Attest dari Apple memastikan permintaan datang dari app Rupa yang asli. Rupa juga menyimpan nomor instalasi acak di iPhone kamu dan mengirimnya ke backend kami bersama ID app anonim kamu, untuk mencegah penyalahgunaan (misalnya terlalu banyak permintaan per menit). Untuk pembatasan ini, backend kami hanya menyimpan hash berkunci dari alamat IP kamu, bukan alamat IP-nya.</li>
   <li><strong>Catatan edit.</strong> Untuk setiap edit cloud, kami menyimpan catatan teknis singkat (alat, status, waktu, ukuran gambar, biaya) tanpa fotonya. Catatan ini terhapus otomatis sekitar 1 sampai 2 hari kemudian. Jumlah edit per bulan disimpan sampai 60 hari setelah bulan itu berakhir.</li>
   <li><strong>Pembelian.</strong> Pembayaran diurus oleh Apple. Kami tidak pernah melihat nama atau data pembayaran kamu. Untuk mengaktifkan Rupa Plus, kami menerima data transaksi bertanda tangan dari Apple (produk, ID transaksi, tanggal, status perpanjangan) dan memeriksanya lewat App Store Server API dari Apple.</li>
   <li><strong>Notifikasi.</strong> Kalau kamu mengizinkan notifikasi, kami menyimpan token push supaya bisa memberi tahu saat edit cloud selesai dan memperbarui Live Activity di Layar Kunci.</li>
-  <li><strong>Diagnostik dan penggunaan.</strong> Firebase Crashlytics mengumpulkan laporan crash dan data performa. Firebase Analytics mengumpulkan aktivitas di app (misalnya alat yang dibuka), ID instance app, model perangkat, versi iOS, bahasa, dan perkiraan wilayah dari alamat IP. Data ini <strong>tidak terhubung</strong> dengan ID app anonim kamu dan hanya dipakai untuk memperbaiki masalah dan mengembangkan Rupa.</li>
+  <li><strong>Diagnostik dan penggunaan.</strong> Firebase Crashlytics mengumpulkan laporan crash dan data performa. Firebase Analytics mengumpulkan aktivitas di app (misalnya alat yang dibuka), aktivitas pembelian in-app, ID instance app, model perangkat, versi iOS, bahasa, dan perkiraan wilayah dari alamat IP. Data ini <strong>tidak terhubung</strong> dengan ID app anonim kamu dan hanya dipakai untuk memperbaiki masalah dan mengembangkan Rupa.</li>
 </ul>
 <p>Rupa tidak memakai ID iklan (IDFA), tidak meminta izin pelacakan, tidak menampilkan iklan, dan tidak melacak kamu di app atau situs lain.</p>
 
@@ -117,7 +117,7 @@
 <p>Karena Rupa tidak punya akun, kami hanya bisa menemukan data kamu lewat app. Cara tercepat untuk menghapusnya adalah <strong>Pengaturan &gt; Hapus data cloud saya</strong>. Semua pilihan ada di halaman <a href="../delete/">Hapus data kamu</a>. Kami menjawab permintaan paling lama dalam 15 hari.</p>
 
 <h2>9. Keamanan</h2>
-<p>Data dienkripsi saat dikirim. Foto di cloud disimpan di penyimpanan dengan akses terbatas yang hanya bisa dibaca oleh instalasi Rupa kamu dan hanya bisa ditulis oleh backend kami.</p>
+<p>Data dienkripsi saat dikirim. Saat kamu memulai edit cloud, Rupa mengunggah foto (dan mask-nya, untuk Hapus Objek dan mode hapus tulisan) langsung ke penyimpanan cloud kami, ke folder yang hanya bisa diakses oleh instalasi Rupa kamu dan backend kami. Backend kami hanya memakainya untuk menjalankan edit kamu.</p>
 
 <h2>10. Anak-anak</h2>
 <p>Rupa punya rating 13+ dan tidak ditujukan untuk anak di bawah 13 tahun. Kami tidak dengan sengaja memproses data anak di bawah 13 tahun. Kalau usiamu masih di bawah batas usia persetujuan di negaramu, minta izin orang tua atau wali sebelum memakai alat AI cloud. Kalau kamu merasa ada anak yang memakai alat cloud, hubungi kami dan datanya akan kami hapus.</p>

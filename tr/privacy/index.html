@@ -83,11 +83,11 @@
 <ul>
   <li><strong>Anonim uygulama kimliği.</strong> Rupa’da hesap yoktur. İlk kullanımda Firebase Authentication, kurulumunuz için rastgele bir anonim kimlik oluşturur. Bu kimlik adınız, e-postanız, telefon numaranız veya Apple Hesabınızla ilişkili değildir.</li>
   <li><strong>Ücretsiz düzenleme sayacı.</strong> Her iPhone 3 ücretsiz bulut yapay zeka düzenlemesi alır. Uygulamayı yeniden yükleseniz bile bunları sayabilmek için Apple’ın DeviceCheck hizmetini kullanırız; bu hizmet cihaz başına Apple’da iki bit (0 ile 3 arasında bir sayı) saklamamıza izin verir. Başka hiçbir şey içermez.</li>
-  <li><strong>Uygulama doğrulama.</strong> Firebase App Check ve Apple’ın App Attest hizmeti, isteklerin orijinal Rupa uygulamasından geldiğini doğrular. Rupa ayrıca kötüye kullanımı sınırlamak için (örneğin dakikada çok fazla istek) iPhone’unuzda rastgele bir kurulum numarası saklar.</li>
+  <li><strong>Uygulama doğrulama.</strong> Firebase App Check ve Apple’ın App Attest hizmeti, isteklerin orijinal Rupa uygulamasından geldiğini doğrular. Rupa ayrıca kötüye kullanımı sınırlamak için (örneğin dakikada çok fazla istek) iPhone’unuzda rastgele bir kurulum numarası saklar ve bu numarayı anonim uygulama kimliğinizle birlikte arka uç sistemimize gönderir. Bu sınırlar için arka uç sistemimiz IP adresinizin kendisini değil, yalnızca anahtarlı bir özetini (hash) saklar.</li>
   <li><strong>Düzenleme kayıtları.</strong> Her bulut düzenlemesi için fotoğraf olmadan kısa bir teknik kayıt (araç, durum, zaman, görüntü boyutu, maliyet) tutarız. Bu kayıt yaklaşık 1–2 gün sonra otomatik olarak silinir. Aylık düzenleme sayıları, ayın bitiminden sonra 60 gün saklanır.</li>
   <li><strong>Satın alımlar.</strong> Ödemeleri Apple yönetir. Adınızı veya ödeme bilgilerinizi asla görmeyiz. Rupa Plus’ı etkinleştirmek için Apple’ın imzalı işlem verilerini (ürün, işlem kimliği, tarihler, yenileme durumu) alır ve Apple’ın App Store Server API’si ile doğrularız.</li>
   <li><strong>Bildirimler.</strong> Bildirimlere izin verirseniz, bulut düzenlemesi hazır olduğunda size haber vermek ve Kilitli Ekran’daki Canlı Etkinliği güncellemek için bir push token saklarız.</li>
-  <li><strong>Tanılama ve kullanım.</strong> Firebase Crashlytics çökme raporları ve performans verileri toplar. Firebase Analytics uygulama kullanım olaylarını (örneğin hangi aracın açıldığı), uygulama örneği kimliğini, cihaz modelini, iOS sürümünü, dili ve IP adresinden çıkarılan yaklaşık bölgeyi toplar. Bu veriler anonim uygulama kimliğinizle <strong>ilişkilendirilmez</strong> ve yalnızca sorunları gidermek ve Rupa’yı geliştirmek için kullanılır.</li>
+  <li><strong>Tanılama ve kullanım.</strong> Firebase Crashlytics çökme raporları ve performans verileri toplar. Firebase Analytics uygulama kullanım olaylarını (örneğin hangi aracın açıldığı), uygulama içi satın alma olaylarını, uygulama örneği kimliğini, cihaz modelini, iOS sürümünü, dili ve IP adresinden çıkarılan yaklaşık bölgeyi toplar. Bu veriler anonim uygulama kimliğinizle <strong>ilişkilendirilmez</strong> ve yalnızca sorunları gidermek ve Rupa’yı geliştirmek için kullanılır.</li>
 </ul>
 <p>Rupa reklam kimliğini (IDFA) kullanmaz, takip izni istemez, reklam göstermez ve sizi başka uygulamalar ya da web siteleri arasında takip etmez.</p>
 
@@ -117,7 +117,7 @@
 <p>Rupa’da hesap olmadığından verilerinizi yalnızca uygulama üzerinden bulabiliriz. Silmenin en hızlı yolu <strong>Ayarlar &gt; Bulut verilerimi sil</strong> seçeneğidir. Tüm seçenekler için <a href="../delete/">Verilerinizi silin</a> sayfasına bakın. Taleplere en geç 15 gün içinde yanıt veririz.</p>
 
 <h2>9. Güvenlik</h2>
-<p>Veriler aktarım sırasında şifrelenir. Buluttaki fotoğraflar, yalnızca sizin Rupa kurulumunuzun okuyabildiği ve yalnızca arka uç sistemimizin yazabildiği erişimi kısıtlı bir alanda saklanır.</p>
+<p>Veriler aktarım sırasında şifrelenir. Bir bulut düzenlemesi başlattığınızda Rupa fotoğrafı (Nesne Silme ve yazı silme modunda maskeyle birlikte) doğrudan bulut depolama alanımıza, yalnızca sizin Rupa kurulumunuzun ve arka uç sistemimizin erişebildiği bir klasöre yükler. Arka uç sistemimiz bu dosyaları yalnızca düzenlemenizi yapmak için kullanır.</p>
 
 <h2>10. Çocuklar</h2>
 <p>Rupa 13+ yaş derecelendirmesine sahiptir ve 13 yaşından küçük çocuklara yönelik değildir. 13 yaşından küçük çocukların verilerini bilerek işlemeyiz. 18 yaşından küçükseniz bulut yapay zeka araçlarını kullanmadan önce ebeveyninizden veya velinizden izin alın. Bir çocuğun bulut aracını kullandığını düşünüyorsanız bize yazın, verileri sileriz.</p>

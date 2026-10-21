@@ -83,11 +83,11 @@
 <ul>
   <li><strong>Anonymous app ID.</strong> Walang account sa Rupa. Sa unang gamit, gumagawa ang Firebase Authentication ng random na anonymous ID para sa installation mo. Hindi ito naka-link sa pangalan, email, phone number o Apple Account mo.</li>
   <li><strong>Counter ng libreng edits.</strong> May 3 libreng cloud AI edits ang bawat iPhone. Para mabilang ito, kahit mag-reinstall ka, ginagamit namin ang DeviceCheck ng Apple, na nagse-save ng dalawang bit bawat device sa Apple (numerong 0 hanggang 3). Wala nang iba pang laman.</li>
-  <li><strong>App integrity.</strong> Kinukumpirma ng Firebase App Check kasama ang App Attest ng Apple na galing sa totoong Rupa app ang mga request. May random na install number din ang Rupa sa iPhone mo para limitahan ang abuse (halimbawa, sobrang daming request kada minuto).</li>
+  <li><strong>App integrity.</strong> Kinukumpirma ng Firebase App Check kasama ang App Attest ng Apple na galing sa totoong Rupa app ang mga request. May random na install number din ang Rupa sa iPhone mo, na ipinapadala sa backend namin kasama ng anonymous app ID mo, para limitahan ang abuse (halimbawa, sobrang daming request kada minuto). Para sa limit na ito, keyed hash lang ng IP address mo ang sine-save ng backend namin, hindi ang mismong IP address.</li>
   <li><strong>Edit records.</strong> Sa bawat cloud edit, nagtatago kami ng maikling technical record (tool, status, oras, laki ng image, cost), walang photo. Awtomatiko itong nabubura mga 1 hanggang 2 araw pagkatapos. Ang monthly edit count ay tinatago hanggang 60 araw pagkatapos ng buwan.</li>
   <li><strong>Purchases.</strong> Ang Apple ang humahawak ng bayad. Hindi namin nakikita ang pangalan o payment details mo. Para ma-unlock ang Rupa Plus, natatanggap namin ang signed transaction data ng Apple (product, transaction ID, mga petsa, renewal status) at chine-check namin ito gamit ang App Store Server API ng Apple.</li>
   <li><strong>Notifications.</strong> Kung papayagan mo ang notifications, nagse-save kami ng push token para masabihan ka kapag ready na ang cloud edit at ma-update ang Live Activity sa Lock Screen mo.</li>
-  <li><strong>Diagnostics at usage.</strong> Kumukuha ang Firebase Crashlytics ng crash reports at performance data. Kumukuha ang Firebase Analytics ng app usage events (halimbawa, kung aling tool ang binuksan), app-instance ID, device model, iOS version, wika at tinatayang region mula sa IP address. <strong>Hindi naka-link</strong> ang data na ito sa anonymous app ID mo at ginagamit lang para ayusin ang problema at i-improve ang Rupa.</li>
+  <li><strong>Diagnostics at usage.</strong> Kumukuha ang Firebase Crashlytics ng crash reports at performance data. Kumukuha ang Firebase Analytics ng app usage events (halimbawa, kung aling tool ang binuksan), in-app purchase events, app-instance ID, device model, iOS version, wika at tinatayang region mula sa IP address. <strong>Hindi naka-link</strong> ang data na ito sa anonymous app ID mo at ginagamit lang para ayusin ang problema at i-improve ang Rupa.</li>
 </ul>
 <p>Hindi ginagamit ng Rupa ang advertising identifier (IDFA), hindi humihingi ng tracking permission, walang ads, at hindi ka tina-track sa ibang apps o websites.</p>
 
@@ -117,7 +117,7 @@
 <p>Dahil walang account sa Rupa, sa app lang namin mahahanap ang data mo. Ang pinakamabilis na paraan para burahin ito ay <strong>Settings &gt; Delete my cloud data</strong>. Tingnan ang lahat ng paraan sa <a href="../delete/">Burahin ang data mo</a>. Sinasagot namin ang mga request sa loob ng 15 araw.</p>
 
 <h2>9. Security</h2>
-<p>Naka-encrypt ang data habang ipinapadala. Ang cloud photos ay naka-save sa storage na restricted ang access: ang Rupa installation mo lang ang makakabasa, at ang backend lang namin ang makakasulat.</p>
+<p>Naka-encrypt ang data habang ipinapadala. Kapag nagsimula ka ng cloud edit, diretsong ina-upload ng Rupa ang photo (at ang mask, para sa Object Remover at Remove Text) sa cloud storage namin, sa folder na ang Rupa installation mo at ang backend lang namin ang may access. Ginagamit lang ito ng backend namin para gawin ang edit mo.</p>
 
 <h2>10. Mga bata</h2>
 <p>Rated 13+ ang Rupa at hindi ito para sa mga batang wala pang 13 taong gulang. Hindi namin sinasadyang mag-process ng data ng batang wala pang 13. Kung wala ka pa sa edad na puwedeng mag-consent sa lugar mo, magpaalam muna sa magulang o guardian bago gumamit ng cloud AI tools. Kung sa tingin mo may batang gumamit ng cloud tool, mag-email sa amin at buburahin namin ang data.</p>
