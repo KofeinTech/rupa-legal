@@ -46,7 +46,7 @@
   </nav>
   <main id="main">
     <h1>Política de Privacidade</h1>
-    <p class="meta">Data de vigência: 21 de outubro de 2026</p>
+    <p class="meta">Data de vigência: 25 de outubro de 2026</p>
 <p class="lead">O Rupa é um editor de fotos para iPhone feito pela Indise LLC (“nós”). Esta política explica quais dados o Rupa usa, para onde eles vão e por quanto tempo ficam guardados.</p>
 
 <div class="note">
@@ -73,11 +73,12 @@
 <ul>
   <li><strong>O que é enviado:</strong> só a foto que você está editando, reduzida e salva como JPEG, sem localização e outros metadados (EXIF). No Remover Objeto e no modo remover texto, também é enviada a máscara que marca a área a ser removida.</li>
   <li><strong>Para onde vai:</strong> para o nosso backend no Google Firebase (Google Cloud, região de Singapura asia-southeast1) e depois para a <strong>fal.ai</strong> (Features &amp; Labels, Inc., EUA), a provedora de IA que roda o modelo para nós.</li>
-  <li><strong>Verificação de conteúdo:</strong> antes da edição, a foto é verificada automaticamente para detectar conteúdo proibido (por exemplo, conteúdo sexual). Fotos bloqueadas são apagadas na hora e a edição não é contada.</li>
+  <li><strong>Verificação de conteúdo:</strong> antes da edição, a foto é verificada automaticamente para detectar conteúdo proibido (por exemplo, conteúdo sexual). Fotos bloqueadas são apagadas na hora e a edição não é contada. Os resultados passam pela mesma verificação; um resultado bloqueado é apagado e a edição também não é contada.</li>
   <li><strong>Exclusão:</strong> a foto original é apagada do nosso armazenamento assim que o processamento termina. O resultado é apagado assim que o Rupa termina de baixá-lo no seu iPhone. O que não for baixado é apagado automaticamente, então <strong>toda foto na nuvem some em até 24 horas</strong> após o envio. O versionamento e a “exclusão reversível” (soft delete) desse armazenamento estão desativados, então fotos apagadas não podem ser recuperadas. Também pedimos à fal.ai que os arquivos temporários dela expirem em até uma hora.</li>
   <li><strong>Sem treinamento:</strong> o Rupa nunca usa suas fotos ou resultados para treinar ou melhorar modelos de IA.</li>
 </ul>
 <p><strong>Mudar com IA.</strong> Quando você usa o Mudar com IA, o Rupa envia uma cópia menor da sua foto (sem localização nem outros metadados) e o texto que você digitou para a fal.ai, que roda o modelo de imagem Gemini do Google (Google LLC, EUA) para fazer a edição. O Rupa apaga a sua foto, o seu texto e o resultado dos próprios servidores em até 24 horas e pede à fal.ai que não guarde a solicitação e apague os arquivos gerados em até uma hora. O Google guarda prompts, imagens e resultados por até 55 dias só para detectar e evitar abusos, e diz que não os usa para treinar seus modelos. As imagens feitas com o Mudar com IA levam uma marca d’água invisível SynthID do Google, que as identifica como geradas por IA.</p>
+<p><strong>Verificação de segurança do texto.</strong> Quando você digita um pedido no Mudar com IA, o texto do pedido (nunca a sua foto, nunca o seu ID no app) também passa por uma verificação de segurança feita por um modelo de texto automático. A fal.ai faz essa verificação por meio das parceiras OpenRouter e Groq. O seu texto é usado só para essa verificação e não é usado para treinar IA. A OpenRouter e a Groq dizem que não guardam o texto, exceto que a Groq pode guardá-lo por até 30 dias se for preciso investigar abusos ou erros.</p>
 <p>O Rupa pede esse consentimento uma vez, antes da sua primeira edição na nuvem, e só pede de novo se este aviso mudar. Você pode revogá-lo a qualquer momento: <strong>Ajustes &gt; Apagar meus dados na nuvem</strong> apaga seus dados na nuvem e zera o consentimento, então o Rupa pergunta de novo antes da próxima edição na nuvem. Até você concordar de novo, nada é enviado.</p>
 
 <h2>4. Outros dados que o Rupa usa</h2>
@@ -107,6 +108,8 @@
 <tr><td>Google (Firebase / Google Cloud)</td><td>Backend, ID anônimo, armazenamento temporário de fotos, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapura; Analytics e Crashlytics nos EUA</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Roda os modelos de IA das ferramentas na nuvem</td><td>EUA</td></tr>
 <tr><td>Google LLC (Gemini, via fal.ai)</td><td>Roda o modelo de imagem Gemini do Mudar com IA</td><td>EUA</td></tr>
+<tr><td>OpenRouter, Inc. (via fal.ai)</td><td>Encaminha o texto dos pedidos do Mudar com IA para o modelo de verificação de segurança</td><td>EUA</td></tr>
+<tr><td>Groq, Inc. (via fal.ai e OpenRouter)</td><td>Roda o modelo de verificação de segurança no texto dos pedidos do Mudar com IA</td><td>EUA</td></tr>
 <tr><td>Apple</td><td>Pagamentos da App Store, DeviceCheck, App Attest, notificações push</td><td>EUA e outros locais da Apple</td></tr>
 </tbody></table></div>
 <p>Cada prestador só pode usar os dados para nos prestar o seu serviço. Não vendemos nem compartilhamos seus dados com mais ninguém, exceto quando a lei exigir.</p>

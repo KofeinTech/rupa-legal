@@ -46,7 +46,7 @@
   </nav>
   <main id="main">
     <h1>Privacy Policy</h1>
-    <p class="meta">Petsa ng bisa: Oktubre 21, 2026</p>
+    <p class="meta">Petsa ng bisa: Oktubre 25, 2026</p>
 <p class="lead">Ang Rupa ay photo editor para sa iPhone na gawa ng Indise LLC (“kami”). Ipinapaliwanag ng policy na ito kung anong data ang ginagamit ng Rupa, saan ito napupunta, at gaano katagal ito tinatago.</p>
 
 <div class="note">
@@ -73,11 +73,12 @@
 <ul>
   <li><strong>Ano ang ipinapadala:</strong> ang photo lang na ine-edit mo, pinaliit at sine-save bilang JPEG na tanggal ang location at ibang metadata (EXIF). Sa Object Remover at Remove Text, ipinapadala rin ang mask na nagmamarka sa area na buburahin.</li>
   <li><strong>Saan ito napupunta:</strong> sa backend namin sa Google Firebase (Google Cloud, Singapore region asia-southeast1), tapos sa <strong>fal.ai</strong> (Features &amp; Labels, Inc., USA), ang AI provider na nagpapatakbo ng model para sa amin.</li>
-  <li><strong>Content check:</strong> bago i-edit, awtomatikong chine-check ang photo kung may bawal na content (halimbawa, sexual content). Ang naka-block na photo ay agad binubura at hindi binibilang ang edit.</li>
+  <li><strong>Content check:</strong> bago i-edit, awtomatikong chine-check ang photo kung may bawal na content (halimbawa, sexual content). Ang naka-block na photo ay agad binubura at hindi binibilang ang edit. Ganito rin chine-check ang results; ang naka-block na result ay binubura at hindi rin binibilang ang edit.</li>
   <li><strong>Pagbura:</strong> binubura ang original mo sa storage namin pagkatapos ma-process. Binubura ang result pagka-download ng Rupa sa iPhone mo. Lahat ng hindi na-download ay awtomatikong binubura, kaya <strong>wala na ang bawat cloud photo sa loob ng 24 oras</strong> mula sa upload. Naka-off ang versioning at “soft delete” sa storage na ito, kaya hindi na mababawi ang binurang photo. Hinihiling din namin sa fal.ai na mag-expire ang mga temporary file nila sa loob ng isang oras.</li>
   <li><strong>Walang training:</strong> hindi kailanman ginagamit ng Rupa ang photos o results mo para mag-train o mag-improve ng AI models.</li>
 </ul>
 <p><strong>AI Change.</strong> Kapag ginamit mo ang AI Change, nagpapadala ang Rupa ng mas maliit na kopya ng photo mo (walang location o ibang metadata) at ng text na tina-type mo sa fal.ai, na nagpapatakbo ng Gemini image model ng Google (Google LLC, USA) para gawin ang edit. Binubura ng Rupa ang photo mo, ang text mo at ang result mula sa sarili nitong servers sa loob ng 24 oras, at sinasabihan ang fal.ai na huwag itago ang request at burahin ang mga nagawang file sa loob ng isang oras. Tinatago ng Google ang prompts, images at results nang hanggang 55 araw para lang ma-detect at mapigilan ang abuso, at sinasabi nitong hindi nito ginagamit ang mga ito para mag-train ng models nito. May invisible na SynthID watermark mula sa Google ang mga image na gawa sa AI Change, na nagmamarka sa mga ito bilang AI-generated.</p>
+<p><strong>Safety check ng text mo.</strong> Kapag nag-type ka ng request para sa AI Change, chine-check din para sa safety ng isang automated text model ang text ng request mo (hindi kailanman ang photo mo, hindi kailanman ang app ID mo). Pinapatakbo ng fal.ai ang check na ito sa pamamagitan ng partners nito na OpenRouter at Groq. Ginagamit lang ang text mo para sa check na iyon at hindi ito ginagamit para mag-train ng AI. Sinasabi ng OpenRouter at Groq na hindi nila ito tinatago, maliban na puwede itong itago ng Groq nang hanggang 30 araw kung kailangang imbestigahan ang abuso o error.</p>
 <p>Isang beses lang hihingin ng Rupa ang pahintulot na ito, bago ang una mong cloud edit, at hihingin lang ulit kapag nagbago ang abisong ito. Puwede mo itong bawiin anumang oras: binubura ng <strong>Settings &gt; Delete my cloud data</strong> ang cloud data mo at nire-reset ang pahintulot, kaya magtatanong ulit ang Rupa bago ang susunod na cloud edit. Hangga’t hindi ka pumapayag ulit, walang ina-upload.</p>
 
 <h2>4. Iba pang data na ginagamit ng Rupa</h2>
@@ -107,6 +108,8 @@
 <tr><td>Google (Firebase / Google Cloud)</td><td>Backend, anonymous ID, pansamantalang photo storage, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapore; Analytics at Crashlytics sa USA</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Nagpapatakbo ng AI models para sa cloud tools</td><td>USA</td></tr>
 <tr><td>Google LLC (Gemini, sa pamamagitan ng fal.ai)</td><td>Nagpapatakbo ng Gemini image model para sa AI Change</td><td>USA</td></tr>
+<tr><td>OpenRouter, Inc. (sa pamamagitan ng fal.ai)</td><td>Ipinapasa ang text ng AI Change requests sa safety check model</td><td>USA</td></tr>
+<tr><td>Groq, Inc. (sa pamamagitan ng fal.ai at OpenRouter)</td><td>Nagpapatakbo ng safety check model sa text ng AI Change requests</td><td>USA</td></tr>
 <tr><td>Apple</td><td>App Store payments, DeviceCheck, App Attest, push notifications</td><td>USA at iba pang lokasyon ng Apple</td></tr>
 </tbody></table></div>
 <p>Puwede lang gamitin ng bawat provider ang data para ibigay ang serbisyo nila sa amin. Hindi namin ibinebenta o ibinabahagi ang data mo sa iba, maliban kung hinihingi ng batas.</p>

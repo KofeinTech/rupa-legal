@@ -46,7 +46,7 @@
   </nav>
   <main id="main">
     <h1>Chính sách quyền riêng tư</h1>
-    <p class="meta">Ngày hiệu lực: 21 tháng 10 năm 2026</p>
+    <p class="meta">Ngày hiệu lực: 25 tháng 10 năm 2026</p>
 <p class="lead">Rupa là ứng dụng chỉnh ảnh trên iPhone do Indise LLC (“chúng tôi”) phát triển. Chính sách này giải thích Rupa dùng những dữ liệu nào, dữ liệu được gửi đi đâu và được lưu trong bao lâu.</p>
 
 <div class="note">
@@ -73,11 +73,12 @@
 <ul>
   <li><strong>Những gì được gửi:</strong> chỉ ảnh bạn đang chỉnh, đã thu nhỏ và lưu dạng JPEG, gỡ bỏ vị trí và các siêu dữ liệu khác (EXIF). Với Xoá Vật Thể và chế độ xoá chữ, mặt nạ đánh dấu vùng cần xoá cũng được gửi kèm.</li>
   <li><strong>Gửi đến đâu:</strong> đến hệ thống máy chủ của chúng tôi trên Google Firebase (Google Cloud, khu vực Singapore asia-southeast1), rồi đến <strong>fal.ai</strong> (Features &amp; Labels, Inc., Hoa Kỳ), nhà cung cấp AI chạy mô hình cho chúng tôi.</li>
-  <li><strong>Kiểm tra nội dung:</strong> trước khi chỉnh, ảnh được tự động kiểm tra nội dung bị cấm (ví dụ nội dung tình dục). Ảnh bị chặn sẽ bị xoá ngay và lần sửa đó không bị tính.</li>
+  <li><strong>Kiểm tra nội dung:</strong> trước khi chỉnh, ảnh được tự động kiểm tra nội dung bị cấm (ví dụ nội dung tình dục). Ảnh bị chặn sẽ bị xoá ngay và lần sửa đó không bị tính. Kết quả cũng được kiểm tra như vậy; kết quả bị chặn sẽ bị xoá và lần sửa đó cũng không bị tính.</li>
   <li><strong>Xoá ảnh:</strong> ảnh gốc của bạn bị xoá khỏi bộ lưu trữ của chúng tôi ngay khi xử lý xong. Kết quả bị xoá ngay khi Rupa tải về iPhone của bạn. Những gì chưa được tải về sẽ tự động bị xoá, nên <strong>mọi ảnh trên đám mây đều biến mất trong vòng 24 giờ</strong> kể từ lúc tải lên. Tính năng lưu phiên bản và “xoá mềm” (soft delete) của bộ lưu trữ này đã được tắt, nên ảnh đã xoá không thể khôi phục. Chúng tôi cũng yêu cầu fal.ai xoá các tệp tạm của họ trong vòng một giờ.</li>
   <li><strong>Không dùng để huấn luyện:</strong> Rupa không bao giờ dùng ảnh hay kết quả của bạn để huấn luyện hoặc cải thiện mô hình AI.</li>
 </ul>
 <p><strong>Đổi Ảnh Bằng AI.</strong> Khi bạn dùng Đổi Ảnh Bằng AI, Rupa gửi một bản sao thu nhỏ của ảnh (không kèm vị trí hay siêu dữ liệu khác) và chữ bạn đã nhập đến fal.ai, nơi chạy mô hình hình ảnh Gemini của Google (Google LLC, Hoa Kỳ) để thực hiện lần sửa. Rupa xoá ảnh, chữ bạn nhập và kết quả khỏi máy chủ của chính Rupa trong vòng 24 giờ, đồng thời yêu cầu fal.ai không lưu yêu cầu và xoá các tệp được tạo trong vòng một giờ. Google giữ lời nhắc, hình ảnh và kết quả tối đa 55 ngày chỉ để phát hiện và ngăn chặn lạm dụng, và cho biết không dùng chúng để huấn luyện mô hình của mình. Ảnh tạo bằng Đổi Ảnh Bằng AI mang hình mờ SynthID vô hình của Google, đánh dấu đó là ảnh do AI tạo.</p>
+<p><strong>Kiểm tra an toàn cho chữ bạn nhập.</strong> Khi bạn nhập yêu cầu cho Đổi Ảnh Bằng AI, nội dung chữ của yêu cầu (không bao giờ kèm ảnh, không bao giờ kèm mã ứng dụng của bạn) cũng được một mô hình văn bản tự động kiểm tra an toàn. fal.ai thực hiện bước kiểm tra này qua các đối tác OpenRouter và Groq. Chữ bạn nhập chỉ được dùng cho bước kiểm tra đó và không được dùng để huấn luyện AI. OpenRouter và Groq cho biết họ không lưu nội dung này, ngoại trừ Groq có thể giữ tối đa 30 ngày khi cần điều tra lạm dụng hoặc lỗi.</p>
 <p>Rupa chỉ xin sự đồng ý này một lần, trước lần sửa đám mây đầu tiên, và chỉ hỏi lại khi thông báo này thay đổi. Bạn có thể rút lại sự đồng ý bất cứ lúc nào: <strong>Cài đặt &gt; Xoá dữ liệu đám mây của tôi</strong> sẽ xoá dữ liệu đám mây của bạn và đặt lại sự đồng ý, nên Rupa sẽ hỏi lại trước lần sửa đám mây tiếp theo. Cho đến khi bạn đồng ý lại, không có gì được tải lên.</p>
 
 <h2>4. Dữ liệu khác mà Rupa sử dụng</h2>
@@ -107,6 +108,8 @@
 <tr><td>Google (Firebase / Google Cloud)</td><td>Máy chủ, mã ẩn danh, lưu ảnh tạm thời, App Check, Remote Config, Crashlytics, Analytics</td><td>Singapore; Analytics và Crashlytics tại Hoa Kỳ</td></tr>
 <tr><td>fal.ai (Features &amp; Labels, Inc.)</td><td>Chạy mô hình AI cho công cụ đám mây</td><td>Hoa Kỳ</td></tr>
 <tr><td>Google LLC (Gemini, qua fal.ai)</td><td>Chạy mô hình hình ảnh Gemini cho Đổi Ảnh Bằng AI</td><td>Hoa Kỳ</td></tr>
+<tr><td>OpenRouter, Inc. (qua fal.ai)</td><td>Chuyển chữ của yêu cầu Đổi Ảnh Bằng AI đến mô hình kiểm tra an toàn</td><td>Hoa Kỳ</td></tr>
+<tr><td>Groq, Inc. (qua fal.ai và OpenRouter)</td><td>Chạy mô hình kiểm tra an toàn cho chữ của yêu cầu Đổi Ảnh Bằng AI</td><td>Hoa Kỳ</td></tr>
 <tr><td>Apple</td><td>Thanh toán App Store, DeviceCheck, App Attest, thông báo đẩy</td><td>Hoa Kỳ và các địa điểm khác của Apple</td></tr>
 </tbody></table></div>
 <p>Mỗi nhà cung cấp chỉ được dùng dữ liệu để cung cấp dịch vụ cho chúng tôi. Chúng tôi không bán hay chia sẻ dữ liệu của bạn cho bất kỳ ai khác, trừ khi pháp luật yêu cầu.</p>
